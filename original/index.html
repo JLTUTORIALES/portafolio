@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="Es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Jose Luis Ortiz Sánchez"/>
+    <title>Jose Ortiz / Desarrollador web</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" href="res/icon.png"/>
+    <script src="https://kit.fontawesome.com/9bea2f1c05.js" crossorigin="anonymous" async></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" async></script>
+</head>
+<body>
+    <nav>
+        <ul class="information">
+            <img src="res/icon.png" alt="ícono" class="nav-icon"/>
+            <a onclick="_scrollTo(0);" type="button" id="contact-button"><li>Contacto</li></a>
+            <a onclick="_scrollTo(1);" type="button" id="portfolio-button"><li>Portafolio</li></a>
+            <a onclick="_scrollTo(2);" type="button" id="about-button"><li>Sobre mí</li></a>
+        </ul>
+    </nav>
+    <center>
+    <header>
+        <h1 class="main-presentation">
+            <div class="text">
+                <span class="presentation-1">Hola,</span>
+                <span class="presentation-2">Soy Jose Ortiz</span>
+                <span class="presentation-3">Desarrollador Web / Desarrollador de Software</span>
+            </div>
+            <img src="res/profile.jpg" alt="Foto de perfil" class="profile"/>
+        </h1>
+    </header>
+    <article>
+        <section class="about-me" id="about-me">
+            <h1 class="section-title">Sobre mí</h1>
+            <p>
+                Programador autodicacta, tengo 18 años, aprendí a programar en el 2017 cuando tenía catorce, sin embargo, poseo unos
+                conocimientos bastante sólidos; en este momento no cuento con experiencia laboral en esta área pero estoy muy motivado
+                en conseguirla y aprender más de este hermoso campo de la informatica.
+            </p>
+            <h1 class="section-title">Algunos Hobbies</h1>
+            <p>
+                <ul class="hobbies-list">
+                    <li>Leer <span class="fas fa-book"></span></li>
+                    <li>Tocar Guitarra <span class="fas fa-guitar"></span></li>
+                    <li>Programar <span class="fas fa-code"></span></li>
+                    <li>Jugar Videojuegos <span class="fas fa-gamepad"></span></li>
+                </ul>
+            </p>
+        </section>
+        <section class="skills">
+            <h1 class="section-title">Habilidades</h1>
+            <div class="skills-1">
+                <span class="fab fa-html5" title="HTML 5"></span>
+                <span class="fab fa-css3-alt" title="CSS 3"></span>
+                <span class="fab fa-js" title="JavaScript"></span>
+            </div>
+            <div class="skills-2">
+                <span class="fab fa-php" title="PHP"></span>
+                <span class="fa fa-database" title="SQL"></span>
+                <span class="fab fa-git" title="GIT"></span>
+            </div>
+            <div class="skills-3">
+                <span class="fab fa-python" title="PYTHON"></span>
+            </div>
+            <a target="_blank" href="res/hoja_de_vida.pdf"><button>Descargar CV</button></a>
+        </section>
+    </article>
+    <article class="portfolio" id="portfolio">
+        <h1 class="article-title">Proyectos</h1>
+        <section class="project" style="background-image: url('res/icon.png');">
+            <center>
+            <span class="project-title">Plantilla de Blog</span>
+            <p>
+                Este proyecto web el cual consiste en una herramienta que contiene lo necesario para ser un blog personal
+                abarca desde el front-end hasta el back-end.
+            </p>
+            <div class="about">
+                <a target="_blank" href="https://github.com/JLTUTORIALES/plantilla_de_blog.git">
+                    <span class="fa fa-github" title="Ir al positorio"></span>
+                </a>
+                <a target="_blank" href="https://plantillablog.luisjdev.com">
+                    <span class="fas fa-sign-in-alt" title="Ver el proyecto"></span>
+                </a>
+            </div>
+            </center>
+        </section>
+        <section class="project" style="background-image: url('res/proyecto2.png');">
+            <center>
+            <span class="project-title">Asistente Virtual</span>
+            <p>
+                Este es un proyecto diseñado en python el cual consiste en un asistente virtual que puede ejecutar comandos
+                personalizados de forma escrita y por voz.
+            </p>
+            <div class="about">
+                <a href="https://github.com/JLTUTORIALES/virtual-assistant.git" target="_blank">
+                    <span class="fa fa-github" title="Ir al positorio"></span>
+                </a>
+            </div>
+            </center>
+        </section>
+    </article>
+    <article class="contacto" id="contacto">
+        <div class="contact-info">
+            <h1 class="article-title">Contacto</h1>
+            <span class="text-contacto">Puedes contactar conmigo a través de los siguientes medios</span>
+            <ul class="contact-icons">
+                <li><a href="https://twitter.com/JdevLuis" target="_blank">
+                    <span class="fab fa-twitter" title="Twitter"></span></a></li>
+                <li><a href="mailto:contacto@luisjdev.com" target="_blank">
+                    <span class="fas fa-envelope" title="Email"></span></a></li>
+                <li><a href="https://m.me/joseortiz922" target="_blank">
+                    <span class="fab fa-facebook-messenger" title="Messenger"></span></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=+573209734130" target="_blank">
+                    <span class="fab fa-whatsapp-square" title="Whatsapp"></span></a></li>
+            </ul>
+        </div>
+    </article>
+    </center>
+    <footer>
+        <span>luisjdev.com &copy;2021</span>
+        <span>Todos los derechos reservados</span>
+        <span>Bogotá D.C., Colombia</span>
+        <a href="#"><button>Ver código fuente</button></a>
+    </footer>
+    <script>
+        function _scrollTo(target){
+            if (target == 0){
+                $('html, body').animate({
+                    scrollTop: $("#contacto").offset().top - 100
+                }, 500);
+            } else if (target == 1){
+                $('html, body').animate({
+                    scrollTop: $("#portfolio").offset().top - 100
+                }, 500);
+            } if (target == 2){
+                $('html, body').animate({
+                    scrollTop: $("#about-me").offset().top - 100
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>
